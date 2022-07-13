@@ -2,7 +2,7 @@ import unittest
 from  parameterized import parameterized_class
 
 @parameterized_class(('a','b','expected_sum','expected_diff'),(
-    (1, 2, 3, 2),
+    (1, 2, 3, -1),
    (5, 7, 12, 2),
 ))
 
