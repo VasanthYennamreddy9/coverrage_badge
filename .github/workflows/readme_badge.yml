@@ -22,8 +22,8 @@ jobs:
         uses: MishaKav/pytest-coverage-comment@main
         with:
           hide-comment: true
-          pytest-coverage-path: pytest_coverage.txt
-          junitxml-path: pytest_cov.xml
+          pytest-coverage-path: pytest-coverage.txt
+          junitxml-path: pytest.xml
 
       - name: Create Variable of Summary Report
         id: summary_report
