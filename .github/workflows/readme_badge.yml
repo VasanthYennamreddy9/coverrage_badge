@@ -33,6 +33,17 @@ jobs:
         if: ${{ github.ref == 'refs/heads/main' }}
         run: |
           sed -i '/<!-- Pytest Coverage Comment:Begin -->/,/<!-- Pytest Coverage Comment:End -->/c\<!-- Pytest Coverage Comment:Begin -->\n\${{ steps.summary_report.outputs.content }}\n<!-- Pytest Coverage Comment:End -->' ./README.md
+      
+      - name: Create the Badge
+        uses: schneegans/dynamic-badges-action@v1.0.0
+        with:
+          auth: ${{ secrets.GIST_SECRET }}
+          gistID: fa30c0cc061747ad9bfd1cebc9f946e8
+          filename: pytest-coverage-comment__main.json
+          label: Coverage Report
+          message: ${{ steps.coverageComment.outputs.coverage }}
+          color: ${{ steps.coverageComment.outputs.color }}
+          namedLogo: python
 
       - name: Commit & Push changes to Readme
         if: ${{ github.ref == 'refs/heads/main' }}
@@ -40,3 +51,5 @@ jobs:
         with:
           message: Update coverage on Readme
           github_token: ${{ secrets.REPO_TOKEN }}
+      
+      
