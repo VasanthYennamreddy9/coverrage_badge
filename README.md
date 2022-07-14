@@ -3,6 +3,10 @@
 
 
 <!-- Pytest Coverage Comment:Begin -->
-\n<!-- Pytest Coverage Comment:End -->
+| Tests | Skipped | Failures | Errors | Time |
+| ----- | ------- | -------- | -------- | ------------------ |
+| 6 | 0 :zzz: | 0 :x: | 0 :fire: | 0.048s :stopwatch: |
+
+<!-- Pytest Coverage Comment:End -->
 
 experiment to use coverage badge for PR and README 
