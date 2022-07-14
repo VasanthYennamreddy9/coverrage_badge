@@ -21,7 +21,7 @@ jobs:
 
       - name: Build coverage file
         run: |
-          pytest --junitxml=./data/pytest.xml --cov-report=term-missing:skip-covered --cov=app tests/ | tee ./data/pytest-coverage.txt
+          pytest --junitxml=./data/pytest_2.xml --cov-report=term-missing:skip-covered --cov=app tests/ | tee ./data/pytest-coverage_2.txt
 
       - name: Pytest coverage comment
         id: coverageComment
