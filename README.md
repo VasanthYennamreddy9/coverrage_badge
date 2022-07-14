@@ -3,6 +3,6 @@
 
 
 <!-- Pytest Coverage Comment:Begin -->
-\n<!-- Pytest Coverage Comment:End -->
+<!-- Pytest Coverage Comment:End -->
 
 experiment to use coverage badge for PR and README 
