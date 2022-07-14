@@ -1,2 +1,2 @@
 string = "nothing"
-str2 = "changing to check workflow"
+str2 = "changing to check workflows"
