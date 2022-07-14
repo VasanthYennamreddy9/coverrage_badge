@@ -21,14 +21,14 @@ jobs:
 
       - name: Build coverage file
         run: |
-          pytest --junitxml=./data/pytest_3.xml --cov-report term-missing:skip-covered --cov=coverrage_badge tests/ | tee ./data/pytest-coverage_3.txt
+          pytest --junitxml=pytest_cov.xml --cov-report term-missing:skip-covered --cov=coverrage_badge tests/ | tee pytest_coverage.txt
 
       - name: Pytest coverage comment
         id: coverageComment
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          pytest-coverage-path: ./data/pytest-coverage_3.txt
-          junitxml-path: ./data/pytest_3.xml
+          pytest-coverage-path: pytest-coverage.txt
+          junitxml-path: pytest_cov.xml
 
       - name: Check the output coverage
         run: |

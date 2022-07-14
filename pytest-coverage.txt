@@ -1,0 +1,20 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.9.13, pytest-7.1.2, pluggy-1.0.0
+rootdir: /Users/flyfin/Documents/coverage/coverrage_badge
+plugins: cov-3.0.0
+collected 6 items
+
+apps/tests/test_program.py ......                                        [100%]
+
+- generated xml file: /Users/flyfin/Documents/coverage/coverrage_badge/pytest.xml -
+
+---------- coverage: platform darwin, python 3.9.13-final-0 ----------
+Name              Stmts   Miss  Cover   Missing
+-----------------------------------------------
+apps/program.py       6      1    83%   8
+-----------------------------------------------
+TOTAL                15      1    93%
+
+3 files skipped due to complete coverage.
+
+============================== 6 passed in 0.05s ===============================
