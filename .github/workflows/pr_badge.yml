@@ -2,14 +2,9 @@ name: My Pytest Coverage Comment
 on:
   pull_request:
 jobs:
-  live-test:
-    name: Live Test
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
     
-    build:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
@@ -26,14 +21,14 @@ jobs:
 
       - name: Build coverage file
         run: |
-          pytest --junitxml=./data/pytest.xml --cov-report=term-missing:skip-covered --cov=app tests/ | tee ./data/pytest-coverage.txt
+          pytest --junitxml=./data/pytest_3.xml --cov-report term-missing:skip-covered --cov=coverrage_badge tests/ | tee ./data/pytest-coverage_3.txt
 
       - name: Pytest coverage comment
         id: coverageComment
         uses: MishaKav/pytest-coverage-comment@main
         with:
-          pytest-coverage-path: ./data/pytest-coverage.txt
-          junitxml-path: ./data/pytest.xml
+          pytest-coverage-path: ./data/pytest-coverage_3.txt
+          junitxml-path: ./data/pytest_3.xml
 
       - name: Check the output coverage
         run: |
