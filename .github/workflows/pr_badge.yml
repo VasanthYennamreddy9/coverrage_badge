@@ -2,14 +2,9 @@ name: My Pytest Coverage Comment
 on:
   pull_request:
 jobs:
-  live-test:
-    name: Live Test
+  build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
     
-    build:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
 
