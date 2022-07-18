@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.210" timestamp="2022-07-18T13:24:29.843293" hostname="fv-az380-789"><testcase classname="" name="apps.tests.test_program" time="0.000"><error message="collection failure">ImportError while importing test module '/home/runner/work/coverrage_badge/coverrage_badge/apps/tests/test_program.py'.
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="1" failures="0" skipped="0" tests="1" time="0.163" timestamp="2022-07-18T13:24:58.316277" hostname="fv-az243-137"><testcase classname="" name="apps.tests.test_program" time="0.000"><error message="collection failure">ImportError while importing test module '/home/runner/work/coverrage_badge/coverrage_badge/apps/tests/test_program.py'.
 Hint: make sure your test modules/packages have valid Python names.
 Traceback:
 /usr/lib/python3.8/importlib/__init__.py:127: in import_module
