@@ -1,4 +1,4 @@
-name: Update Coverage on Readme
+name: Coverage Badge for README
 on:
   push:
     branches:
@@ -15,6 +15,16 @@ jobs:
       - name: Extract branch name
         run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
         id: extract_branch
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install flake8 pytest pytest-cov
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      
+      - name: Build coverage file
+        run: |
+          pytest --junitxml=pytest.xml --cov-report term-missing:skip-covered --cov=apps  | tee pytest-coverage.txt
 
       - name: Pytest coverage comment
         if: ${{ github.ref == 'refs/heads/main' }}
@@ -23,7 +33,7 @@ jobs:
         with:
           hide-comment: true
           pytest-coverage-path: pytest-coverage.txt
-          junitxml-path: pytest.xml
+          junitxml-path: pytest_cov.xml
 
       - name: Create Variable of Summary Report
         id: summary_report
@@ -45,7 +55,7 @@ jobs:
           label: Coverage Report
           message: ${{ steps.coverageComment.outputs.coverage }}
           color: ${{ steps.coverageComment.outputs.color }}
-          namedLogo: python
+          
 
       - name: Commit & Push changes to Readme
         if: ${{ github.ref == 'refs/heads/main' }}
