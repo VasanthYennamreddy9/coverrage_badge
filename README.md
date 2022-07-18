@@ -3,11 +3,7 @@
 ![badge](https://img.shields.io/endpoint?url=https://gist.githubusercontent.com/VasanthYennamreddy9/fa30c0cc061747ad9bfd1cebc9f946e8/raw/pytest-coverage-comment__main.json)
 
 <!-- Pytest Coverage Comment:Begin -->
-| Tests | Skipped | Failures | Errors | Time |
-| ----- | ------- | -------- | -------- | ------------------ |
-| 6 | 0 :zzz: | 0 :x: | 0 :fire: | 0.044s :stopwatch: |
-
-<!-- Pytest Coverage Comment:End -->
+\n<!-- Pytest Coverage Comment:End -->
 
 experiment to use coverage badge for PR and README 
 
